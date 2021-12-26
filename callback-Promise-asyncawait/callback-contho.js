@@ -21,12 +21,21 @@ function xxx() {
 }
 
 // con_tho_an_co(hotel(xxx));
-con_tho_an_co(function() {
-  hotel(function(){
-    xxx()
-  });
-});
 
+hotel(xxx)
+
+// con_tho_an_co(
+//   hotel(
+//     xxx()
+// ));
+
+// con_tho_an_co(function() {
+//   hotel(function(){
+//     xxx()
+//   });
+// });
+
+//hell
 // function doA(cb) {
 //   console.log('b')
 //   // cb();
