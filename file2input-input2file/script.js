@@ -1,7 +1,7 @@
 var btnLoadUrl = document.querySelector('#loadUrl');
 btnLoadUrl.addEventListener("click", ()=>{
   var url = document.querySelector('#url').value;
-  loadFileToInputFiled(url)
+  loadURLToInputField(url)
 });
 
 var btnLoadImage = document.querySelector('#loadImage');
@@ -21,7 +21,7 @@ file_browser.addEventListener('change',()=>{
   reader.readAsDataURL(document.querySelector('#file_browser').files[0]);
 })
 
-function loadFileToInputFiled(url){
+function loadURLToInputField(url){
   getImgURL(url, (imgBlob)=>{
     // Load img blob to input
     // WIP: UTF character error
@@ -30,7 +30,7 @@ function loadFileToInputFiled(url){
     let container = new DataTransfer(); 
     container.items.add(file);
     document.querySelector('#file_input').files = container.files;
-    document.querySelector('#status').files = container.files;
+    // document.querySelector('#status').files = container.files;
     
   })
 }
