@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URL, file to input and preview</title>
+  
+</head>
+<body>
+  <h1>Load URL to input</h1>
+  <input width="100%" id='url' type="text" placeholder="paste url image here" value="https://cloudinary-res.cloudinary.com/image/upload/dpr_2.0,c_scale,f_auto,q_auto,w_156/cloudinary_logo_for_white_bg.svg">
+  <button id="loadUrl">Load URL to input type file</button>
+  <input id='file_input' type="file">
+  <span>status input file type: <span id="status"></span></span>
+ 
+  <h1>Load input to preview</h1>
+  <button id="loadImage" >Load input  to preview</button>
+  <input type="file" name="" id="preview_input">
+  <img src="" id='img-preview' alt="img-preview">
+
+  <h1>Load input file browser to preview</h1>
+  <input type="file" name="" id="file_browser">
+  <img src="" id='img-preview2' alt="preview2">
+
+  <script src="script.js"></script>
+</body>
+</html>
