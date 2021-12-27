@@ -24,7 +24,7 @@ file_browser.addEventListener('change',()=>{
 function loadURLToInputField(url){
   getImgURL(url, (imgBlob)=>{
     // Load img blob to input
-    let fileName = 'hasFilename.jpg' // should .replace(/\.[^/.]+$/, "") for remove '/' character in variable dynamic
+    let fileName = 'hasFilename.jpg' // should .replace(/[/\\?%*:|"<>]/g, '-') for remove special char like / \
     let file = new File([imgBlob], fileName,{type:"image/jpeg", lastModified:new Date().getTime()}, 'utf-8');
     let container = new DataTransfer(); 
     container.items.add(file);
