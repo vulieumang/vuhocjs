@@ -24,8 +24,7 @@ file_browser.addEventListener('change',()=>{
 function loadURLToInputField(url){
   getImgURL(url, (imgBlob)=>{
     // Load img blob to input
-    // WIP: UTF character error
-    let fileName = 'hasFilename.jpg'
+    let fileName = 'hasFilename.jpg' // should .replace(/\.[^/.]+$/, "") for remove '/' character in variable dynamic
     let file = new File([imgBlob], fileName,{type:"image/jpeg", lastModified:new Date().getTime()}, 'utf-8');
     let container = new DataTransfer(); 
     container.items.add(file);
