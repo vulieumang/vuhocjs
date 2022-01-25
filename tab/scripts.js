@@ -5,6 +5,7 @@ const $$ = document.querySelectorAll.bind(document)
 var tabs = $('.tabs')
 var tab_panel = tabs.querySelectorAll('.tab-panel')
 var tab_header_items = tabs.querySelectorAll('.tab-header-item')
+
 var line = tabs.querySelector('.line')
 // line.style.width = tab_header_items[0].offsetWidth
 // Fix first load
@@ -25,6 +26,16 @@ tab_header_items.forEach(function(tab, index){
     tab.classList.add('active')
     tab_panel[index].classList.add('active')
   })
+  tab.addEventListener("mouseover", function( event ) {
+    line.style.width = tab.offsetWidth
+    line.style.left = tab.offsetLeft
+  }, false);
+  tab.addEventListener("mouseout", function( event ) {
+    var tab_header_items_active = tabs.querySelector('.tab-header-item.active')
+    line.style.width = tab_header_items_active.offsetWidth
+    line.style.left = tab_header_items_active.offsetLeft
+  }, false);
+  
 })
 
 
