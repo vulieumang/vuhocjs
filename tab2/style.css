@@ -1,0 +1,47 @@
+body {
+  color:#555;
+  margin:20px 0 0 0;
+}
+
+#box {
+  position:relative;
+  height:100px;
+  margin:15px 0 0 0;
+}
+
+ul{
+  margin:0;
+  padding:0;
+  display:block;
+}
+
+li {
+  float:left;
+  margin:0 0 0 10px;
+  padding:10px;
+  list-style-type:none; 
+  font-family:Arial;
+}
+
+li a {
+  display:block;
+  text-decoration:none;
+  font-weight:bold;
+  color:#222;
+}
+
+#menu li.slide-line {
+	display: block;
+  padding:0;
+  margin:0;
+	background: none #CC0000;
+	z-index: 0;
+	position: absolute;
+	top: 0;
+	border-radius:3px;
+  width: 47px; 
+  height: 5px; 
+  left: 0; 
+  top: 0;
+  z-index: -1;
+}
