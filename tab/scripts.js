@@ -26,7 +26,7 @@ tab_header_items.forEach(function(tab, index){
     tab.classList.add('active')
     tab_panel[index].classList.add('active')
   })
-  tab.addEventListener("mouseover", function( event ) {
+  tab.addEventListener("mouseenter", function( event ) {
     line.style.width = tab.offsetWidth
     line.style.left = tab.offsetLeft
   }, false);
