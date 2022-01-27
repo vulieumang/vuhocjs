@@ -7,13 +7,13 @@ var tab_panel = tabs.querySelectorAll('.tab-panel')
 var tab_header_items = tabs.querySelectorAll('.tab-header-item')
 
 var line = tabs.querySelector('.line')
-// line.style.width = tab_header_items[0].offsetWidth
+line.style.width = tab_header_items[0].offsetWidth
 // Fix first load
-document.onreadystatechange = () => {
-  if (document.readyState === 'complete') {
-    line.style.width = tab_header_items[0].offsetWidth
-  }
-};
+// document.onreadystatechange = () => {
+//   if (document.readyState === 'complete') {
+//     line.style.width = tab_header_items[0].offsetWidth
+//   }
+// };
 
 tab_header_items.forEach(function(tab, index){
   tab.addEventListener('click',function(){
